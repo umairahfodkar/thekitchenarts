@@ -34,7 +34,10 @@ const Footer = () => {
   <img src={InstagramLogo} alt="Instagram Logo" className='w-[25px] h-[25px]'/>
 </a>
 
-        <img src={FbLogo} alt="My Image" className='w-[25px] h-[25px]' />
+<a href="https://www.facebook.com/thekitchenart.18" target="_blank" rel="noopener noreferrer">
+  <img src={FbLogo} alt="My Image" className='w-[25px] h-[25px]' />
+</a>
+
         
 
         </div>
