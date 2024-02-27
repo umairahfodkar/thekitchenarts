@@ -1,8 +1,9 @@
 import React from 'react';
 import  { useEffect } from 'react';
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { HashLink as Link } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production';
+
 
 export default function Benefitss({ scrollToContact }) {
   useEffect(() => {
@@ -81,7 +82,7 @@ Completion</p>
   className='my-2 mb-6 border-2 hover:border-[#25285A] hover:bg-white hover:text-[#25285A] transition duration-300 bg-[#25285A] text-white px-10 py-1 rounded-lg font-canada'
   style={{ transform: 'rotateY(360deg)' }}   onClick={scrollToContact} 
 >
-  Book Consultation
+<Link to='#contactus'>Book Consultation</Link>                         
 </button>
 
         </div>

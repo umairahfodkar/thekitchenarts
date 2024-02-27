@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import logo from '../assets/images/kitchen_art_logo.png';
+import Modularkitchen  from './Modularkitchen';
+import { Link } from 'react-router-dom';
 
-const Navbar = ({scrollToContact, scrollToAboutus,scrollToService}) => {
+
+const Navbar = ({scrollToContact}) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
-  };
-
-  const handleAboutUsClick = () => {
-    // Close the drawer when "ABOUT US" is clicked
-    handleNav();
-    
-    // Scroll to the "ABOUT US" section
-    scrollToAboutus();
   };
 
   const handlecontactusClick = () => {
@@ -24,12 +19,8 @@ const Navbar = ({scrollToContact, scrollToAboutus,scrollToService}) => {
     // Scroll to the "Contact US" section
     scrollToContact();
   };
+  
 
-  const handleserviceClick = () => {
-    handleNav();
-    scrollToService();
-    console.log('Scrolling to SERVICES');
-  };
   
   return (
     <div className='sticky z-50 top-0 bg-[#890809]'>
@@ -37,25 +28,28 @@ const Navbar = ({scrollToContact, scrollToAboutus,scrollToService}) => {
         <img className='w-[150px] sm:w-[200px] '  src={logo} alt="" />
         
         <ul className='hidden lg:flex'>
-          <li className='p-4 font-normal text-xl text-white hover:text-white hover:cursor-pointer'>
-            <span>HOME</span>
-          </li>
-          <li onClick={scrollToAboutus} className='p-4  font-normal text-xl text-white hover:text-white'>
-            <span>ABOUT US</span>
-          </li>
-          <li onClick={scrollToService} className='p-4  font-normal text-xl text-white hover:text-white'>
-            <span>SERVICES</span>
-          </li>
-          <li className='p-4  font-normal text-xl text-white hover:text-white'>
-            <span>MODULAR KITCHEN </span>
-          </li>
-          <li className='p-4  font-normal text-xl text-white hover:text-white'>
-            <span>MODULAR FURNITURE</span>
-          </li>
-          <li onClick={scrollToContact}  className='p-4  font-normal text-xl text-white hover:text-white'>
-            <span>CONTACT US</span>
-          </li>
-        </ul>
+  <li className='p-4 font-normal text-xl text-white  hover:cursor-pointer'>
+    <Link to="/">HOME</Link>
+  </li>
+  <li className='p-4 font-normal text-xl text-white hover:cursor-pointer'>
+    <Link to="/about">ABOUT US</Link>
+  </li>
+  <li className='p-4 font-normal text-xl text-white  hover:cursor-pointer'>
+    <Link to="/services">SERVICES</Link>
+  </li>
+  <li className='p-4 font-normal text-xl text-white  hover:cursor-pointer'>
+  <Link to="/modularkitchen">MODULAR KITCHEN</Link>
+
+  </li>
+  <li className='p-4 font-normal text-xl text-white  hover:cursor-pointer'>
+  <Link to="/modularfurniture">MODULAR FURNITURE</Link>
+
+  </li>
+  <li className='p-4 font-normal text-xl text-white  hover:cursor-pointer'>
+    <Link to="/contact">CONTACT US</Link>
+  </li>
+</ul>
+
         
         <div onClick={handleNav} className='block lg:hidden'>
           {nav ? <AiOutlineClose color='white'  size={30} /> : <AiOutlineMenu color='white'  size={25} />}
@@ -75,23 +69,23 @@ const Navbar = ({scrollToContact, scrollToAboutus,scrollToService}) => {
           {/* Your drawer content goes here */}
           <div>
             <h1 className='w-full text-4xl font-faustine text-white mt-8 m-4'></h1>
-            <li className='p-4 font-extrabold  text-xl text-white font-faustine hover:text-black hover:cursor-pointer' onClick={handleNav}>
-              <span>HOME</span>
+            <li className='p-4 font-extrabold  text-xl text-white font-faustine  hover:cursor-pointer' onClick={handleNav}>
+            <Link to="/">HOME</Link>
             </li>
-            <li className='p-4 font-extrabold text-xl text-white font-faustine hover:text-black hover:cursor-pointer' onClick={handleAboutUsClick}>
-              <span>ABOUT US</span>
+            <li className='p-4 font-extrabold text-xl text-white font-faustine  hover:cursor-pointer'onClick={handleNav} >
+            <Link to="/about">ABOUT US</Link>
             </li>
-            <li className='p-4 font-extrabold text-xl text-white font-faustine hover:text-black hover:cursor-pointer' onClick={handleserviceClick}>
-              <span>SERVICES</span>
+            <li className='p-4 font-extrabold  text-xl text-white font-faustine  hover:cursor-pointer'onClick={handleNav} >
+            <Link to="/services">SERVICES</Link>
             </li>
             <li className='p-4 font-extrabold text-xl text-white font-faustine ' onClick={handleNav}>
-              <span>MODULAR KITCHEN</span>
+            <Link to="/modularkitchen">MODULAR KITCHEN</Link>
             </li>
-            <li className='p-4 font-extrabold text-xl text-white font-faustine hover:text-black' onClick={handleNav}>
-              <span>MODULAR FURNITURE</span>
+            <li className='p-4 font-extrabold text-xl text-white font-faustine ' onClick={handleNav}>
+            <Link to="/modularfurniture">MODULAR FURNITURE</Link>
             </li>
-            <li onClick={handlecontactusClick} className='p-4 font-faustine font-extrabold text-xl text-white hover:text-black'>
-              <span>CONTACT US</span>
+            <li  className='p-4 font-faustine font-extrabold text-xl text-white ' onClick={handleNav}>
+            <Link to="/contact">CONTACT US</Link>
             </li>
           </div>
         </ul>

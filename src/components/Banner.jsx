@@ -3,6 +3,8 @@ import bannerimg from '../assets/images/bannerimg.png';
 import AboutUsImg from '../assets/images/About_us.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { HashLink as Link } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production';
+
 
 
 const Banner = ({scrollToContact}) => {
@@ -51,7 +53,7 @@ const Banner = ({scrollToContact}) => {
            
             className="border-2 border-[#A15757] text-[#A15757] px-4 py-2 font-medium hover:bg-[#A15757] hover:text-white transition duration-300"
             onClick={scrollToContact}  >
-            Speak To Our Expert
+            <Link to='#contactus'>Speak To Our Experts</Link>
           </button>
         </div>
         <div  data-aos='slide-left' className="p-10">

@@ -1,7 +1,5 @@
-// App.js
-
-import React, { useRef } from 'react';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import Footer from './components/Footer';
 import About from './components/About';
 import Services from './components/Services';
@@ -15,53 +13,31 @@ import BackToTopButton from './components/Backtotbutton';
 import Herosection from './components/Herosection';
 import Navbar from './components/Navbar';
 import WhatsAppButton from './components/Whatsappbutton';
-import Heronew from './components/Heronew';
-
+import Modularkitchen from './components/Modularkitchen';
+import Modularfurniture from './components/Modularfurniture';
+import Home from './components/Home';
 
 function App() {
-  const contactRef = useRef(null);
-
-  const scrollToContact = () => {
-    const contactElement = document.getElementById('contact');
-    if (contactElement) {
-      contactElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const scrollToAboutus = () => {
-    const aboutElement = document.getElementById('about');
-    if (aboutElement) {
-      aboutElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const scrollToService = () => {
-    const serviceElement = document.getElementById('service');
-    if (serviceElement) {
-      serviceElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <div className="App">
-      <BackToTopButton/>
-      <WhatsAppButton/>
-      <Navbar
-        scrollToContact={scrollToContact}
-        scrollToAboutus={scrollToAboutus}
-        scrollToService={scrollToService}
-      />
-      <Herosection />
-      <About scrollToContact={scrollToContact} />
-      <Services scrollToService={scrollToService} />
-      <Steps scrollToContact={scrollToContact} />
-      <Benefitss scrollToContact={scrollToContact} /> 
-      <Banner scrollToContact={scrollToContact}  />
-      <Kitchenlayouts />
-      <Testimonials />
-      <Contact ref={contactRef} /> 
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+      
+        <BackToTopButton />
+        <WhatsAppButton />
+        <Navbar />
+        <Herosection/>
+        <About  scrollToContact={scrollToContact}/>
+        <Services/>
+        <Steps scrollToContact={scrollToContact} />
+        <Benefitss />
+        <Banner scrollToContact={scrollToContact} />
+        <Kitchenlayouts />
+        <Testimonials />
+        <Footer />
+        <Modularkitchen />
+        <Modularfurniture />
+      </div>
+    </BrowserRouter>
   );
 }
 

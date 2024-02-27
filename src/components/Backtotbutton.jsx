@@ -12,8 +12,8 @@ const BackToTopButton = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Adjust the value (3 components) based on your layout and requirements
-      setShowButton(window.scrollY > 3 * 400);
+      // Adjust the value (3 components) based on your lay
+      setShowButton(window.scrollY > 2 * 200);
     };
 
     window.addEventListener('scroll', handleScroll);

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import AboutUsImg from '../assets/images/About_us.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { HashLink as Link } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production';
 
 function About({ scrollToContact }) {
  
@@ -34,7 +35,7 @@ function About({ scrollToContact }) {
             onClick={scrollToContact} // Add this onClick handler
             className='my-3 mb-6 border-2 hover:border-[#25285A] hover:bg-white hover:text-[#25285A] transition duration-300 bg-[#25285A] text-white px-10 py-1 rounded-lg font-canada'
           >
-            GET STARTED
+           <Link to='#contactus'>GET STARTED</Link>
           </button>
         </div>
       </div>

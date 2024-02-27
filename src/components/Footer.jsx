@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
         <p class="md:text-center text-white py-2 font-canada">Social Networks</p>
         <div className="social-icon-box flex gap-2">
-        <a href="https://www.instagram.com/your_username" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/thekitchenart.18" target="_blank" rel="noopener noreferrer">
   <img src={InstagramLogo} alt="Instagram Logo" className='w-[25px] h-[25px]'/>
 </a>
 
@@ -57,7 +57,7 @@ const Footer = () => {
 
         <div className="address text-white py-1">
           <h6 className='font-canada'>Address</h6>
-          <p className='font-canada'>16/123, Unnat Nagar,Part 3, M. G. Road, Near Gajanan Maharaj Nandir, Goregaon(W),Mumbai 400104.</p>
+          <p className='font-canada'>16/123, Unnat Nagar,Part 3, M. G. Road, Near Gajanan Maharaj Mandir, Goregaon(W),Mumbai 400104.</p>
         </div>
 
         <div className="phone text-white py-1">

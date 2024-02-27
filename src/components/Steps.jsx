@@ -3,6 +3,8 @@ import StepsImg from '../assets/images/steps2.png';
 import  { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { HashLink as Link } from 'react-router-hash-link/dist/react-router-hash-link.cjs.production';
+
 
 const Steps = ({scrollToContact}) => {
   useEffect(() => {
@@ -17,7 +19,7 @@ const Steps = ({scrollToContact}) => {
   }, []);
   
   return (
-    <div id="contactus" className="relative bg-cover bg-center overflow-hidden" style={{ backgroundImage: `url(${StepsImg})` }}>
+    <div className="relative bg-cover bg-center overflow-hidden" style={{ backgroundImage: `url(${StepsImg})` }}>
     <div className="absolute"></div>
     
     <div className="max-w-[1170px] mx-auto py-20 p-3 md:flex md: place-content-end relative">
@@ -49,7 +51,7 @@ const Steps = ({scrollToContact}) => {
       </li>
     </ul>
 
-    <button className='bg-[#A15757] text-[white] px-3 py-3 font-roboto text-sm'   onClick={scrollToContact} >Book Consultation</button>
+    <button className='bg-[#A15757] text-[white] px-3 py-3 font-roboto text-sm'    ><Link to='#contactus'>Book Consultation</Link>  </button>
 
 
 </div>

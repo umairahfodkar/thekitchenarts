@@ -17,7 +17,7 @@ const Contact = () => {
   }, []);
 
   return (
-    <div  id="contact" className="relative bg-cover bg-center overflow-hidden"  style={{ backgroundImage: `url(${ContactUsImg})` }}>
+    <div  id="contactus" className="relative bg-cover bg-center overflow-hidden"  style={{ backgroundImage: `url(${ContactUsImg})` }}>
     <div className="absolute"></div>
     <h1 data-aos='slide-down' className='title-font text-white  mt-12 text-center  text-5xl font-normal font-dm'>Get In Touch</h1>
     <div data-aos='slide-right' className="max-w-[1170px] mx-auto py-20 p-3 md:flex md: place-content-end relative overflow-hidden">
@@ -27,7 +27,7 @@ const Contact = () => {
       type="text"
       name="name"
       placeholder="Your Name"
-      className={`my-4 w-full border-b border-gray-300 pl-4 h-12 bg-transparent block text-white`}
+      className={`my-4 w-full border-b border-white pl-4 h-12 bg-transparent block text-white`}
       autocomplete="off"
       required
     />
@@ -35,7 +35,7 @@ const Contact = () => {
       type="email"
       name="email"
       placeholder="Your Email"
-      className={`my-4 w-full border-b border-gray-300 pl-4 h-12 bg-transparent block text-white`}
+      className={`my-4 w-full border-b border-white pl-4 h-12 bg-transparent block text-white`}
       autocomplete="off"
       required
     />
@@ -44,7 +44,7 @@ const Contact = () => {
   type="number"
   name="number"
   placeholder="Your Number"
-  className={`my-4 w-full border-b border-gray-300 pl-4 h-12 bg-transparent block text-white`}
+  className={`my-4 w-full border-b border-white pl-4 h-12 bg-transparent block text-white`}
   autoComplete="off"
   required
 />
